@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav1">
+        <div class="shopname">
+
+            <h1>Shop Name</h1>
+        </div>
+        <div class="navdiv">
+            <a href="index.html" class="a1 ">Dashboard</a>
+            <a href="products.html" class="a1 active">Products</a>
+            <a href="createbill.html" class="a1">Create Bill</a>
+            <a href="" class="a1">Sales History</a>
+            <a href="" class="a1">Expenses</a>
+            <a href="" class="a1">Reports</a>
+            <a href="" class="a1">Inventory</a>
+            <a href="" class="a1">Settings</a>
+        </div>
+    </div>
+    <div class="main-content">
+        <nav class="navformain">
+
+            <div>
+                <h1 style="padding-top: 30px; padding-left: 20px; font-size: 30px; font-weight: 600; ">Product
+                    Management
+                </h1>
+            </div>
+            <div class="information">
+
+                <h2 style="padding: 40px;  font-size: 17px; font-weight: 540; color: rgb(92, 92, 92);">Shopkeeper</h2>
+            </div>
+        </nav>
+
+
+        <div class="maindiv1">
+            <div>
+                <h1 style="color: rgb(49, 49, 49);">Product Management</h1>
+            </div>
+            <div class="addproduct">
+                <input type="text" placeholder="Search Products..." id="sarthak">
+                <button class="buttonaddprodcut">+ Add Product</button>
+            </div>
+        </div>
+
+
+        <div class="tablemain">
+        <div class="table100">
+            <table class="table1">
+                <thead>
+                    <th class="th1">Product Name</th>
+                    <th class="th1">Barcode</th>
+                    <th class="th1">Category</th>
+                    <th class="th1">Price</th>
+                    <th class="th1">Quantity</th>
+                    <th class="th1">Status</th>
+                    <th class="th1">Action</th>
+                </thead>
+                <tbody class="tbody">
+                    <tr class="tr1">
+                        <td class="td1">Briyani</td>
+                        <td class="td1">860930234924</td>
+                        <td class="td1"><span class="badge">Dairy</span></td>
+                        <td class="td1">$400</td>
+                        <td class="td1">2</td>
+                        <td class="td1"><span class="badge status">In Stock</span></td>
+                        <td class="td1">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr class="tr1">
+                        <td class="td1">Briyani</td>
+                        <td class="td1">860930234924</td>
+                        <td class="td1"><span class="badge">Dairy</span></td>
+                        <td class="td1">$400</td>
+                        <td class="td1">2</td>
+                        <td class="td1"><span class="badge status">In Stock</span></td>
+                        <td class="td1">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr class="tr1">
+                        <td class="td1">Briyani</td>
+                        <td class="td1">860930234924</td>
+                        <td class="td1"><span class="badge">Dairy</span></td>
+                        <td class="td1">$400</td>
+                        <td class="td1">2</td>
+                        <td class="td1"><span class="badge status">In Stock</span></td>
+                        <td class="td1">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr class="tr1">
+                        <td class="td1">Briyani</td>
+                        <td class="td1">860930234924</td>
+                        <td class="td1"><span class="badge">Dairy</span></td>
+                        <td class="td1">$400</td>
+                        <td class="td1">2</td>
+                        <td class="td1"><span class="badge status">In Stock</span></td>
+                        <td class="td1">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+                    <tr class="tr1">
+                        <td class="td1">Briyani</td>
+                        <td class="td1">860930234924</td>
+                        <td class="td1"><span class="badge">Dairy</span></td>
+                        <td class="td1">$400</td>
+                        <td class="td1">2</td>
+                        <td class="td1"><span class="badge status">In Stock</span></td>
+                        <td class="td1">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+
+
+            </table>
+        </div>
+        </div>
+
+        <!-- add product  -->
+         <div class="maindivform">
+         <div class="addp">
+            <form action="" class="form" id="mainfromaddproduct">
+                <div class="addp1">
+                    <div class="header">
+                        <span style="color: rgb(63, 61, 61);">Add Product</span>
+                        <button class="buttonx">x</button>
+                    </div>
+                    <div class="addp2">
+
+                        <div style="margin-bottom: 20px; margin-top: 20px;">
+
+                            <label for="prodcutname" class="prodcutname"
+                                style="margin-bottom: 5px; display: inline-block; font-size: 16px; font-weight: 700; color: rgb(146, 143, 143);">Product
+                                Name</label><br>
+                            <input type="text" placeholder="Enter Prodcut Name" name="prodcutname" class="textinputproductname"
+                                id="commontextinput"><br>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <label for="barcode" class="barcode"
+                                style="margin-bottom: 5px; display: inline-block;  font-size: 16px; font-weight: 700; color: rgb(146, 143, 143);">Barcode</label><br>
+                            <input type="text" placeholder="Enter Barcode Number" id="commontextinput" class="barcode1"><br>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <label for="Category"
+                                style="margin-bottom: 5px; display: inline-block;  font-size: 16px; font-weight: 700; color: rgb(146, 143, 143);">Category</label><br>
+                            <select name="" id="category" class="dropdown">
+                                <option value="Grocery" style="color: red; border-radius: 20px;">Grocery</option>
+                                <option value="Dairy" style="height: 25px; width: 200px;">Dairy</option>
+                                <option value="Beverages" style="height: 25px; width: 200px;">Beverages</option>
+                                <option value="Snacks" style="height: 25px; width: 200px;">Snacks</option>
+                            </select><br>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <label for="sellingprice"
+                                style="margin-bottom: 5px; display: inline-block;  font-size: 16px; font-weight: 700; color: rgb(146, 143, 143);">Selling
+                                Price</label><br>
+                            <input type="text" placeholder="Enter Selling price" id="commontextinput" class="sellingprice1"><br>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <label for="Quantity"
+                                style="margin-bottom: 5px; display: inline-block;  font-size: 16px; font-weight: 700; color: rgb(146, 143, 143);">Quantity</label><br>
+                            <input type="text" placeholder="Enter Quantity" id="commontextinput" class="quantity1"><br>
+                        </div>
+                       <div class="buttons">
+                            <button class="cancel">Cancel</button>
+                            <button class="add" type="submit">Add Product</button>
+                        </div>
+                    </div>
+                     
+                </div>
+
+            </form>
+
+        </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+</body>
+
+  <script src="script.js"></script>
+
+<script>
+
+</script>
+
+
+
+</html>

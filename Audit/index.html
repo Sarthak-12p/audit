@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <div class="nav1">
+           <div class="shopname">
+
+             <h1>Shop Name</h1>
+             </div>
+             <div class="navdiv">
+            <a href="index.html"class="a1 active">Dashboard</a>
+            <a href="products.html" class="a1">Products</a>
+            <a href="createbill.html" class="a1">Create Bill</a>
+            <a href="saleshistory.html" class="a1">Sales History</a>
+            <a href=""  class="a1">Expenses</a>
+            <a href="" class="a1">Reports</a>
+            <a href="" class="a1">Inventory</a>
+            <a href="" class="a1">Settings</a>
+            </div>
+            
+        </div>
+
+         <div class="main-content">
+            <nav class="navformain">
+                
+                <div >
+              <h1 style="padding-top: 30px; padding-left: 20px; font-size: 30px; font-weight: 510; ">Dashboard</h1>
+              </div>
+              <div class="information">
+                
+                <h2 style="padding: 40px;  font-size: 17px; font-weight: 540; color: rgb(92, 92, 92);">Shopkeeper</h2>
+              </div>
+             
+
+            </nav>
+
+        <div class="cards">
+            <div class="card">
+                <div class="card1">
+                    <h3 style="padding: 20px;  font-size: 16.5px;  color: grey; font-weight: 550;">TODAY'S SALES</h3>
+                    <img src="icon1.png" height="30px" width="30px" alt="" class="img1">
+                </div>
+                <div class="update1">
+                    <h1>₹0</h1>
+                    <p style="color: green; font-size: 15px; margin-top: 10px;">+10% from yesterday</p>
+                </div>
+
+
+            </div>
+            <div class="card"><div class="card1">
+                    <h3 style="padding: 20px;  font-size: 16.5px;  color: grey; font-weight: 550;">TOTAL PRODUCTS</h3>
+                    <img src="openbox.png" height="30px" width="30px" alt="" class="img1">
+                </div>
+                <div class="update1">
+                    <h1>₹0</h1>
+                    <p style="color: rgb(255, 0, 0); font-size: 15px; margin-top: 10px;">5 low stocks</p>
+                </div></div>
+            <div class="card"><div class="card1">
+                    <h3 style="padding: 20px;  font-size: 16.5px;  color: grey; font-weight: 550;">TODAY'S EPENSES</h3>
+                    <img src="spending.png" height="30px" width="30px" alt="" class="img1">
+                </div>
+                <div class="update1">
+                    <h1>₹0</h1>
+                    <p style="color: red; font-size: 15px; margin-top: 10px;">-5% from yesterday</p>
+                </div></div>
+            <div class="card"><div class="card1">
+                    <h3 style="padding: 20px;  font-size: 16.5px;  color: grey; font-weight: 550;">TODAY'S PROFIT</h3>
+                    <img src="profits.png" height="30px" width="30px" alt="" class="img1">
+                </div>
+                <div class="update1">
+                    <h1>₹0</h1>
+                    <p style="color: green; font-size: 15px; margin-top: 10px;">+15% from yesterday</p>
+                </div></div>
+        </div>
+
+
+        <div class="quickaction">
+            <div>
+                <h2>Quick action</h2>
+                
+            </div>
+            <div class="linksforquickactions">
+                <a href="products.html" class="quickactona">➕ Add Product</a>
+                <a href="" class="quickactona">🧾 Create Bill</a>
+                <a href="" class="quickactona">💸 Add Expense</a>
+                <a href="" class="quickactona">📊 View Reports</a>
+                
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll(".a1").addEventListener("click", function(event) {
+    event.preventDefault();
+      });
+
+
+    </script>
+
+</body>
+
+
+</html>
