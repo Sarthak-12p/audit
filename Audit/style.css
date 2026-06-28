@@ -78,11 +78,8 @@ body {
     width: calc(100%-60px);
     margin: 30px;
     padding: 20px;
-    box-shadow:
-        0 8px 16px rgba(0, 0, 0, 0.08),
-        0 20px 40px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
-    
 
 .linksforquickactions{
     display: flex;
@@ -118,12 +115,17 @@ body {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+
+   
 }
 
 .card {
     /* display: inline-block; */
+     flex: 1 1 250px;      /* grow | shrink | minimum width */
+    min-width: 250px;
     height: 200px;
-    width: 20vw;
+
+    
     /* border: 2px solid black; */
     background: #fff;
     border-radius: 16px;
@@ -285,7 +287,7 @@ body {
 }
 
 .td1 {
-    color: rgb(100, 100, 100);
+    color: rgb(27, 25, 25);
     font-size: 18px;
 
     padding: 16px 25px;
@@ -305,13 +307,23 @@ body {
     font-weight: 600;
 }
 
-.status {
+.status.in{
     background-color: rgb(160, 233, 156);
     color: green;
     padding: 6px 12px;
     font-size: 12px;
     font-weight: 600;
 }
+
+.status.low{
+    background-color: #F8D7DA;
+    color: rgb(117, 6, 6);
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
 
 .edit {
     font: 15px;
