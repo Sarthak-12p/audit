@@ -15,6 +15,14 @@ buttonx.addEventListener("click", (e) => {
     
 })
 
+let cancel = document.querySelector(".cancel")
+
+cancel.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.querySelector(".maindivform").style.display = "none";
+    
+})
+
 function displayProducts() {
 
     const tbody = document.querySelector(".tbody");
@@ -101,7 +109,28 @@ form.addEventListener("submit", (e) => {
     //                     </td>
     //                 </tr>`);
 
-   
+
+
+    //modern appoarch :-
+//    let alreadyExists = products.some(product => product.barcode === barcode);
+//  if (alreadyExists) {
+//     alert("Barcode already exists!");
+//     return;
+// }
+
+ 
+
+
+
+
+   for (let i = 0; i < products.length; i++) {
+    if (products[i].barcode === barcode) {
+        alert("Barcode already exists!");
+         form.reset();
+            return;
+    }
+}
+  
 
     let product = {
         prodcutname,

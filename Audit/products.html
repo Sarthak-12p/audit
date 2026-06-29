@@ -46,7 +46,7 @@
             </div>
             <div class="addproduct">
                 <input type="text" placeholder="Search Products..." id="sarthak">
-                <button class="buttonaddprodcut">+ Add Product</button>
+                <button class="buttonaddprodcut" style="cursor: pointer;">+ Add Product</button>
             </div>
         </div>
 
@@ -91,12 +91,12 @@
                                 style="margin-bottom: 5px; display: inline-block; font-size: 16px; font-weight: 700; color: rgb(146, 143, 143);">Product
                                 Name</label><br>
                             <input type="text" placeholder="Enter Prodcut Name" name="prodcutname" class="textinputproductname"
-                                id="commontextinput"><br>
+                                id="commontextinput" required autocomplete="off"> <br>
                         </div>
                         <div style="margin-bottom: 20px;">
                             <label for="barcode" class="barcode"
                                 style="margin-bottom: 5px; display: inline-block;  font-size: 16px; font-weight: 700; color: rgb(146, 143, 143);">Barcode</label><br>
-                            <input type="text" placeholder="Enter Barcode Number" id="commontextinput" class="barcode1"><br>
+                            <input type="text" autocomplete="off" placeholder="Enter Barcode Number" id="commontextinput" class="barcode1" required><br>
                         </div>
                         <div style="margin-bottom: 20px;">
                             <label for="Category"
@@ -109,19 +109,19 @@
                             </select><br>
                         </div>
                         <div style="margin-bottom: 20px;">
-                            <label for="sellingprice"
-                                style="margin-bottom: 5px; display: inline-block;  font-size: 16px; font-weight: 700; color: rgb(146, 143, 143);">Selling
+                            <label for="sellingprice" 
+                                style="margin-bottom: 5px; display: inline-block;  font-size: 16px; font-weight: 700; color: rgb(146, 143, 143);" >Selling
                                 Price</label><br>
-                            <input type="text" placeholder="Enter Selling price" id="commontextinput" class="sellingprice1"><br>
+                            <input type="text" autocomplete="off" placeholder="Enter Selling price" id="commontextinput" class="sellingprice1" required><br>
                         </div>
                         <div style="margin-bottom: 20px;">
                             <label for="Quantity"
                                 style="margin-bottom: 5px; display: inline-block;  font-size: 16px; font-weight: 700; color: rgb(146, 143, 143);">Quantity</label><br>
-                            <input type="text" placeholder="Enter Quantity" id="commontextinput" class="quantity1"><br>
+                            <input type="text" autocomplete="off" placeholder="Enter Quantity" id="commontextinput" class="quantity1" required><br>
                         </div>
                        <div class="buttons">
-                            <button class="cancel">Cancel</button>
-                            <button class="add" type="submit">Add Product</button>
+                            <button class="cancel" style="cursor: pointer;">Cancel</button>
+                            <button class="add" type="submit" style="cursor: pointer ;">Add Product</button>
                         </div>
                     </div>
                      

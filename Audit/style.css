@@ -13,7 +13,7 @@ body {
 
 .nav1 {
     display: flex;
-    height: 100vh;
+   
     width: 250px;
     flex-direction: column;
     /* background: #eb1717; */
@@ -73,7 +73,7 @@ body {
 
 }
 
-.quickaction{
+.quickaction {
     border-radius: 10px;
     width: calc(100%-60px);
     margin: 30px;
@@ -81,7 +81,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.linksforquickactions{
+.linksforquickactions {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,11 +89,11 @@ body {
     margin-top: 10px;
 }
 
-.quickactona{
-    border: 2px solid  rgb(54, 136, 237);
+.quickactona {
+    border: 2px solid rgb(54, 136, 237);
     border-radius: 10px;
     font-size: 20px;
-   text-align: center;
+    text-align: center;
     width: 100%;
     padding: 20px;
     text-decoration: none;
@@ -101,10 +101,11 @@ body {
     transition: all 0.5s;
 }
 
-.quickactona:hover{
+.quickactona:hover {
     background-color: rgb(54, 136, 237);
     color: white;
 }
+
 .main-content {
     flex: 1;
 }
@@ -116,16 +117,17 @@ body {
     gap: 30px;
     flex-wrap: wrap;
 
-   
+
 }
 
 .card {
     /* display: inline-block; */
-     flex: 1 1 250px;      /* grow | shrink | minimum width */
+    flex: 1 1 250px;
+    /* grow | shrink | minimum width */
     min-width: 250px;
     height: 200px;
 
-    
+
     /* border: 2px solid black; */
     background: #fff;
     border-radius: 16px;
@@ -307,7 +309,7 @@ body {
     font-weight: 600;
 }
 
-.status.in{
+.status.in {
     background-color: rgb(160, 233, 156);
     color: green;
     padding: 6px 12px;
@@ -315,7 +317,7 @@ body {
     font-weight: 600;
 }
 
-.status.low{
+.status.low {
     background-color: #F8D7DA;
     color: rgb(117, 6, 6);
     padding: 6px 12px;
@@ -375,7 +377,7 @@ body {
 
 }
 
-.maindivform{
+.maindivform {
     display: none;
 }
 
@@ -390,7 +392,7 @@ body {
     justify-content: center;
     align-items: center;
     background: rgba(28, 28, 28, 0.2);
-    
+
 }
 
 .addp1 {
@@ -399,7 +401,7 @@ body {
     border-radius: 10px;
     width: 90%;
     max-width: 500px;
-   
+
 
 
 
@@ -560,18 +562,16 @@ body {
     width: 35vw;
     background-color: white;
     border-radius: 10px;
-     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.15);
 
 
 }
 
 .itemshow {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-    color: rgb(92, 91, 91);
+   max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
 }
 
 .calculation {
@@ -688,19 +688,116 @@ body {
     cursor: pointer;
     transition: transform 0.5s;
 }
-.addsales{
-     margin-left: 10px;
+
+.addsales {
+    margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.addsale1:hover{
+.addsale1:hover {
     transform: translateY(-3px);
-     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.15);
 }
 
-.billg:hover{
+.billg:hover {
     transform: translateY(-3px);
-     box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.search {
+    height: 45px;
+    width: 100px;
+    border-radius: 8px;
+    border: 2px solid #007BFF;
+    color: #007BFF;
+    font-size: 18px;
+    background-color: white;
+    transition: 0.5s;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.cardbillbody{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.cardbilladd {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-right: 10px;
+    
+    padding: 12px;
+    border: 1px solid rgb(112, 110, 110);
+
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); */
+
+}
+
+.cardbilladd1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    gap: 10px;
+    color: rgb(91, 88, 88);
+    font-weight: bold;
+    font-size: 16.5px;
+}
+
+.addcardbill1 {
+    width: 70px;
+    padding: 4px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.addcardbill1:hover {
+    transform: translateY(-2px);
+    background-color: #0458b1;
+}
+
+.itemshowlist{
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    padding-left: 18px;
+    border-bottom: 1px solid #e0e0e0;
+    font-weight: bold;
+
+}
+
+.remove{
+    padding: 10px;
+    border-radius: 8px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+    font-weight: bold;
+
+}
+
+.remove:hover{
+    transform: translateY(-3px);
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.15);
 }

@@ -1,101 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="nav1">
-           <div class="shopname">
+        <div class="shopname">
 
-             <h1>Shop Name</h1>
-             </div>
-             <div class="navdiv">
-            <a href="index.html"class="a1 ">Dashboard</a>
+            <h1>Shop Name</h1>
+        </div>
+        <div class="navdiv">
+            <a href="index.html" class="a1 ">Dashboard</a>
             <a href="products.html" class="a1">Products</a>
             <a href="createbill.html" class="a1 active">Create Bill</a>
             <a href="" class="a1">Sales History</a>
-            <a href=""  class="a1">Expenses</a>
+            <a href="" class="a1">Expenses</a>
             <a href="" class="a1">Reports</a>
             <a href="" class="a1">Inventory</a>
             <a href="" class="a1">Settings</a>
-            </div>
-            
         </div>
-        
-         
-            
 
-        <div class="main-content">
-            <nav class="navformain">
-                
-                <div >
-              <h1 style="padding-top: 30px; padding-left: 20px; font-size: 30px; font-weight: 510; ">Create Bill</h1>
-              </div>
-              <div class="information">
-                
+    </div>
+
+
+
+
+    <div class="main-content">
+        <nav class="navformain">
+
+            <div>
+                <h1 style="padding-top: 30px; padding-left: 20px; font-size: 30px; font-weight: 510; ">Create Bill</h1>
+            </div>
+            <div class="information">
+
                 <h2 style="padding: 40px;  font-size: 17px; font-weight: 540; color: rgb(92, 92, 92);">Shopkeeper</h2>
-              </div>
-             
+            </div>
 
-            </nav>
-            <div class="headercreatebill">
+
+        </nav>
+        <div class="headercreatebill">
 
             <h1>Create Bill</h1>
-            </div>
-            <div class="cardsforbill">
-                <div class="card1bill">
-
-                    <span style="font-size: 18px; font-weight: bolder; color: rgb(36, 35, 35);">Search & Add Products</span><br>
-                    <input type="text" placeholder="Search by name or barcode" id="barcodesearch">
-                    <button class="search">Search</button>
-                    <div class="cardbilladd"></div>
-
-                </div>
-
-                <div class="card2bill">
-                    <div class="cart" style="padding-left: 20px; padding-top: 20px; color: rgb(45, 43, 43); font-size: 20px;">
-                        <h3>Cart</h3>
-                    </div>
-                    <div class="itemshow">
-                        <p>No item added</p>
-                    </div>
-
-                    <div class="calculation">
-                        <div class="subtotal">
-                            <span  class="span12">Subtotal</span>
-                            <span class="span12">$0</span>
-                        </div>
-                        <div class="tax">
-                            <Span class="span12">Tax</Span>
-                            <span class="span12">$0</span>
-                        </div>
-                        <div class="total">
-                            <span class="totalspan">Total</span>
-                            <span class="totalspan">$0</span>
-                        </div>
-
-                    </div>
-                    <p style="margin-left: 15px; margin-top: 15px;"> Payment method</p>
-                    <div class="paymentmethod">
-                        <div class="cash ">💵 Cash</div>
-                        <div class="upi ">📱 UPI</div>
-                    </div>
-                    <div class="generatebill">
-                        <button class="billg" >✓ Generate Bill</button>
-
-                    </div>
-                    <div class="addsales">
-                        <button class="addsale1"> Save Sales</button>
-                    </div>
-
-                </div>
-            </div>
-
         </div>
+        <div class="cardsforbill">
+            <div class="card1bill">
+
+                <span style="font-size: 18px; font-weight: bolder; color: rgb(36, 35, 35);">Search & Add
+                    Products</span><br>
+                <input type="text" placeholder="Search by name or barcode" id="barcodesearch">
+                <button class="search">Search</button>
+                <div class="cardbillbody">
+                    <!-- <div class="cardbilladd">
+                        <div class="cardbilladd1">
+                            <h3>Milk -</h3>
+                            <h3>$40</h3>
+                        </div>
+                        <div>
+                            <button class="addcardbill1">
+                                + Add
+                            </button>
+                        </div>
+                    </div> -->
+                </div>
+
+            </div>
+
+            <div class="card2bill">
+                <div class="cart"
+                    style="padding-left: 20px; padding-top: 20px; color: rgb(45, 43, 43); font-size: 20px;">
+                    <h3>Cart</h3>
+                </div>
+                <div class="itemshow">
+                    <!-- <div class="itemshowlist">
+                        <div>
+                            <span>Milk</span><br>
+                            <span>$40 x 2</span><br>
+                            
+                        </div>
+                        <div>
+                            <span>Price</span>
+                        </div>
+                        <div>
+                            <button >Remove</button>
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="calculation">
+                    <div class="subtotal">
+                        <span class="span12">Subtotal</span>
+                        <span class="span12" id="subtotalprice">₹0</span>
+                    </div>
+                    <div class="tax">
+                        <Span class="span12">Tax</Span>
+                        <span class="span12" id="tax">₹0</span>
+                    </div>
+                    <div class="total">
+                        <span class="totalspan">Total</span>
+                        <span class="totalspan" id="total">₹0</span>
+                    </div>
+
+                </div>
+                <p style="margin-left: 15px; margin-top: 15px;"> Payment method</p>
+                <div class="paymentmethod">
+                    <div class="cash ">💵 Cash</div>
+                    <div class="upi ">📱 UPI</div>
+                </div>
+                <div class="generatebill">
+                    <button class="billg">✓ Generate Bill</button>
+
+                </div>
+                <div class="addsales">
+                    <button class="addsale1"> Save Sales</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 </body>
 
 <script src="createbill.js"></script>
+
 </html>
