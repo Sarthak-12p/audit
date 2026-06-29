@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav1">
+        <div class="shopname">
+
+            <h1>Shop Name</h1>
+        </div>
+        <div class="navdiv">
+            <a href="index.html" class="a1 ">Dashboard</a>
+            <a href="products.html" class="a1">Products</a>
+            <a href="createbill.html" class="a1">Create Bill</a>
+            <a href="saleshistory.html" class="a1">Sales History</a>
+            <a href="expense.html" class="a1 active">Expenses</a>
+            <a href="" class="a1">Reports</a>
+            <a href="" class="a1">Inventory</a>
+            <a href="" class="a1">Settings</a>
+        </div>
+
+    </div>
+
+    <div class="main-content">
+        <nav class="navformain">
+
+            <div>
+                <h1 style="padding-top: 30px; padding-left: 20px; font-size: 30px; font-weight: 510; ">Expense
+                    Management</h1>
+            </div>
+            <div class="information">
+
+                <h2 style="padding: 40px;  font-size: 17px; font-weight: 540; color: rgb(92, 92, 92);">Shopkeeper</h2>
+            </div>
+
+
+        </nav>
+
+
+        <h1 style="margin: 30px;">
+            Expense Management
+        </h1>
+
+        <div class="addexpense">
+            <button class="addexpensebutton"> + Add expense</button>
+            <div class="select">
+                <select name="All categories" id="allcategories">
+                    <option value="Rent">All categories</option>
+
+                    <option value="Rent">Rent</option>
+                    <option value="Electricity">Electricity</option>
+                    <option value="salary" class="salary">Salary</option>
+                    <option value="internet" class="internet">Internet</option>
+                    <option value="Miscellaneous">Miscellaneous</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="tablemain1">
+            <div class="table101">
+                <table class="table2">
+                    <thead>
+                        <th class="th2">Expense Name</th>
+                        <th class="th2">Category</th>
+                        <th class="th2">Amount</th>
+                        <th class="th2">Date</th>
+                        <th class="th2">Action</th>
+
+                    </thead>
+                    <tbody class="tbody1">
+                      
+
+                    </tbody>
+
+
+
+                </table>
+
+            </div>
+            <div class="maindivform1">
+                <div class="adde">
+                    <form action="" class="form1" id="mainfromaddexpense">
+                        <div class="adde1">
+                            <div class="headere">
+                                <span style="color: rgb(63, 61, 61);">Add Expense</span>
+                                <button class="buttonxe">x</button>
+                            </div>
+                            <div class="adde2">
+
+                                <div style="margin-bottom: 20px; margin-top: 20px;">
+
+                                    <label for="prodcutname" class="expensename"
+                                        style="margin-bottom: 5px; display: inline-block; font-size: 16px; font-weight: 700; color: rgb(146, 143, 143);">Expense
+                                        Name
+                                    </label><br>
+                                    <input type="text" placeholder="Enter Expense Name" name="prodcutname"
+                                        class="textinputexpensename" id="commontextinpute" required autocomplete="off">
+                                    <br>
+                                </div>
+                                <!-- <div style="margin-bottom: 20px;">
+                                    <label for="barcode" class="barcode"
+                                        style="margin-bottom: 5px; display: inline-block;  font-size: 16px; font-weight: 700; color: rgb(146, 143, 143);">Barcode</label><br>
+                                    <input type="text" autocomplete="off" placeholder="Enter Barcode Number"
+                                        id="commontextinpute" class="barcode1" required><br>
+                                </div> -->
+                                <div style="margin-bottom: 20px;">
+                                    <label for="Category"
+                                        style="margin-bottom: 5px; display: inline-block;  font-size: 16px; font-weight: 700; color: rgb(146, 143, 143);">Category</label><br>
+                                    <select name="" id="category1" class="dropdown1">
+                                        <option value="Grocery" style="color: red; border-radius: 20px;">Rent
+                                        </option>
+                                        <option value="Dairy" style="height: 25px; width: 200px;">Electricity</option>
+                                        <option value="Beverages" style="height: 25px; width: 200px;">Salary</option>
+                                        <option value="Snacks" style="height: 25px; width: 200px;">Internet</option>
+                                        <option value="Snacks" style="height: 25px; width: 200px;">Miscellaneous
+                                        </option>
+                                    </select><br>
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    <label for="sellingprice"
+                                        style="margin-bottom: 5px; display: inline-block;  font-size: 16px; font-weight: 700; color: rgb(146, 143, 143);">Amount</label><br>
+                                    <input type="text" autocomplete="off" placeholder="Enter Amount"
+                                        id="commontextinpute" class="amount" required><br>
+
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    <label for="date" style="display: block;  margin-bottom: 8px; font-weight: 500;">Date</label>
+                                    <input type="date" id="date" style="width: 60%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 16px;">
+                                </div>
+                                <div class="buttonse">
+                                    <!-- <button class="cancele" style="cursor: pointer;">Cancel</button> -->
+                                    <button class="adde11" type="submit" style="cursor: pointer ;">Add Expense
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script src="expense.js"></script>
+
+</html>

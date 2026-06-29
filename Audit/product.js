@@ -12,15 +12,15 @@ let buttonx = document.querySelector(".buttonx")
 buttonx.addEventListener("click", (e) => {
     e.preventDefault();
     document.querySelector(".maindivform").style.display = "none";
-    
+
 })
 
-let cancel = document.querySelector(".cancel")
+let cancele = document.querySelector(".cancele")
 
-cancel.addEventListener("click", (e) => {
+cancele.addEventListener("click", (e) => {
     e.preventDefault();
     document.querySelector(".maindivform").style.display = "none";
-    
+
 })
 
 function displayProducts() {
@@ -29,26 +29,26 @@ function displayProducts() {
 
     tbody.innerHTML = "";
 
-    products.forEach((product , index) => {
+    products.forEach((product, index) => {
 
-        let status = product.quantity ;
+        let status = product.quantity;
 
-        if(status >= 10){
+        if (status >= 10) {
             status = " In Stock"
         }
-        else{
-            status="Low Stock";
-            
+        else {
+            status = "Low Stock";
+
         }
 
 
         let className;
 
-        if(status === "Low Stock"){
+        if (status === "Low Stock") {
             className = "low"
         }
-        else{
-            className= "in"
+        else {
+            className = "in"
         }
 
         tbody.insertAdjacentHTML("beforeend", `
@@ -74,7 +74,7 @@ function displayProducts() {
     });
 
 
-   
+
 
 }
 
@@ -93,7 +93,7 @@ form.addEventListener("submit", (e) => {
     const category = document.querySelector("#category").value;
     const selling = document.querySelector(".sellingprice1").value;
     const quantity = document.querySelector(".quantity1").value;
-  
+
 
     // const tbody = document.querySelector(".tbody")
     //  tbody.insertAdjacentHTML("beforeend", `  <tr class="tr1">
@@ -112,25 +112,25 @@ form.addEventListener("submit", (e) => {
 
 
     //modern appoarch :-
-//    let alreadyExists = products.some(product => product.barcode === barcode);
-//  if (alreadyExists) {
-//     alert("Barcode already exists!");
-//     return;
-// }
-
- 
+    //    let alreadyExists = products.some(product => product.barcode === barcode);
+    //  if (alreadyExists) {
+    //     alert("Barcode already exists!");
+    //     return;
+    // }
 
 
 
 
-   for (let i = 0; i < products.length; i++) {
-    if (products[i].barcode === barcode) {
-        alert("Barcode already exists!");
-         form.reset();
+
+
+    for (let i = 0; i < products.length; i++) {
+        if (products[i].barcode === barcode) {
+            alert("Barcode already exists!");
+            form.reset();
             return;
+        }
     }
-}
-  
+
 
     let product = {
         prodcutname,
@@ -138,24 +138,24 @@ form.addEventListener("submit", (e) => {
         category,
         selling,
         quantity,
-        
+
     };
 
     products.push(product);
 
     localStorage.setItem("products", JSON.stringify(products));
 
-   displayProducts(); 
+    displayProducts();
+    form.reset();
 
-
-
+    dateInput.value = today;
 
 
 
     document.querySelector(".maindivform").style.display = "none";
-    
 
-    form.reset();
+
+
 
 
 
@@ -178,7 +178,7 @@ tbody.addEventListener("click", (e) => {
         displayProducts();
     }
 
-    if(e.target.classList.contains("edit")){
+    if (e.target.classList.contains("edit")) {
         alert("coming soon")
     }
 
