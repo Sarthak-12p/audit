@@ -81,19 +81,70 @@ function displayproduct() {
     updateSummary();
 }
 
+let sales = []
+let total = 0
 function updateSummary() {
     let subtotal = 0;
+    
 
     carts.forEach(cart => {
         subtotal = subtotal + parseFloat(cart.price*cart.quantity);
     })
 
     let tax = parseFloat(subtotal * 0.18)
-    let total = parseFloat(subtotal + tax)
+     total = parseFloat(subtotal + tax)
     document.querySelector("#subtotalprice").textContent = `₹${subtotal.toFixed(2)}`;
     document.querySelector("#tax").textContent = `₹${tax.toFixed(2)}`;
     document.querySelector("#total").textContent = `₹${total.toFixed(2)}`
+    
+    
 }
+
+
+
+   let paymentmethod1 = "cash"
+ 
+
+    document.querySelector(".paymentmethod").addEventListener("click" , (e)=>{
+        
+        if(e.target.classList.contains("cash")){
+            paymentmethod1 = "cash"
+            document.querySelector(".upi").style.backgroundColor = "white"
+            document.querySelector(".cash").style.backgroundColor = "#007BFF"
+            document.querySelector(".upi").style.color = "black";
+            document.querySelector(".cash").style.color = "white"
+        }
+        if(e.target.classList.contains("upi")){
+            paymentmethod1 = "upi"
+            document.querySelector(".upi").style.backgroundColor = "#007BFF"
+            document.querySelector(".cash").style.backgroundColor = "white"
+            document.querySelector(".upi").style.color = "white";
+            document.querySelector(".cash").style.color = "black";
+            document.querySelector(".cash").style.borderColor = "black";
+            document.querySelector(".cash").style.border = "2px solid black";
+
+            
+        }
+        
+
+    })
+
+  let savesale = document.querySelector(".addsale1");
+
+  savesale.addEventListener("click" , ()=>{
+      sales.push({
+        id: "BILL-" + Date.now(),
+        date: new Date().toLocaleDateString(),
+        amount: total,
+        paymentmethod: paymentmethod1,
+        items : carts.length,
+    })
+    
+    localStorage.setItem("sales" , JSON.stringify(sales));
+    console.log(sales)
+
+  })
+  
 
 
 cardbill.addEventListener("click", (e) => {
@@ -111,18 +162,9 @@ cardbill.addEventListener("click", (e) => {
                 name,
                 price: Number(price),
                 quantity: 1
+                
             });
         }
-
-
-    
-
-
-
-
-
-
-
         displayproduct();
 
 

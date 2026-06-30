@@ -640,6 +640,7 @@ body {
     font-size: 20px;
     height: 48px;
     cursor: pointer;
+    /* border: 1px soild #007BFF; */
 }
 
 .upi {
@@ -649,7 +650,7 @@ body {
     align-items: center;
     border: 2px solid rgb(89, 88, 88);
     border-radius: 8px;
-    height: 45px;
+    height: 48px;
     cursor: pointer;
 }
 
@@ -1061,4 +1062,81 @@ body {
     background-color: rgb(232, 16, 16);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 
+}
+
+.saleshistory{
+    margin: 30px;
+}
+
+.searchbillno{
+    margin-left: 30px;
+    
+}
+
+
+#enterbillno{
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid rgb(103, 102, 102);
+    font-size: 18px;
+    width: 25%;
+
+}
+
+#enterbillno:focus{
+    border: 2.2px solid blue;
+    outline: none;
+    transition: 0.3s;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+
+
+.th3 {
+    background-color: rgb(243, 241, 241);
+    text-align: left;
+    padding: 16px 25px;
+    border-bottom: 1px solid grey;
+    color: rgb(76, 76, 76);
+
+}
+
+.table3 {
+    border: none;
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+
+
+.table102 {
+    /* display: none; */
+    /* width: calc(100% - 60px); */
+    margin: 30px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    background: white;
+
+}
+
+
+
+.tr3 {
+    height: auto;
+
+}
+
+.td3 {
+    color: rgb(27, 25, 25);
+    font-size: 18px;
+
+    padding: 16px 25px;
+    text-align: left;
+    border-bottom: 1px solid rgb(205, 202, 202);
+}
+
+.tr3:hover {
+    background-color: rgb(243, 241, 241);
 }

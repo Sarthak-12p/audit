@@ -1,0 +1,1 @@
+let sales = JSON.parse(localStorage.getItem("sales")) || [];

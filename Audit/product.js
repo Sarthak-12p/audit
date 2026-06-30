@@ -15,13 +15,7 @@ buttonx.addEventListener("click", (e) => {
 
 })
 
-let cancele = document.querySelector(".cancele")
 
-cancele.addEventListener("click", (e) => {
-    e.preventDefault();
-    document.querySelector(".maindivform").style.display = "none";
-
-})
 
 function displayProducts() {
 
