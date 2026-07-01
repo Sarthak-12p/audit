@@ -1,4 +1,5 @@
 let products = JSON.parse(localStorage.getItem("products")) || [];
+let sales = JSON.parse(localStorage.getItem("sales")) || [];
 
 
 
@@ -79,9 +80,12 @@ function displayproduct() {
 
     });
     updateSummary();
+
 }
 
-let sales = []
+
+
+
 let total = 0
 function updateSummary() {
     let subtotal = 0;
@@ -132,6 +136,10 @@ function updateSummary() {
   let savesale = document.querySelector(".addsale1");
 
   savesale.addEventListener("click" , ()=>{
+
+   
+
+     console.log(cartstotal)
       sales.push({
         id: "BILL-" + Date.now(),
         date: new Date().toLocaleDateString(),
@@ -139,13 +147,21 @@ function updateSummary() {
         paymentmethod: paymentmethod1,
         items : carts.length,
     })
+
+    alert("save sale successful!")
     
     localStorage.setItem("sales" , JSON.stringify(sales));
-    console.log(sales)
+    
 
   })
   
+//   let cartstotal = 0;
+//      for(i=0 ; i<carts.length ; i++){
+//         cartstotal = cartstotal + carts[i].length
 
+//      }
+
+//      console.log(cartstotal)
 
 cardbill.addEventListener("click", (e) => {
     if (e.target.classList.contains("addcardbill1")) {
