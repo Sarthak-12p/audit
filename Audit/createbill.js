@@ -137,9 +137,11 @@ function updateSummary() {
 
   savesale.addEventListener("click" , ()=>{
 
-   
+        if (carts.length === 0) {
+        alert("Please add at least one product before saving the sale.");
+        return; // Stop the function here
+    }
 
-     console.log(cartstotal)
       sales.push({
         id: "BILL-" + Date.now(),
         date: new Date().toLocaleDateString(),
@@ -152,6 +154,8 @@ function updateSummary() {
     
     localStorage.setItem("sales" , JSON.stringify(sales));
     
+
+    window.location.reload();
 
   })
   
@@ -187,6 +191,141 @@ cardbill.addEventListener("click", (e) => {
     }
 });
 
+
+function generateBill() {
+    let subtotal = 0;
+    if (carts.length === 0) {
+        alert("Cart is empty!");
+        return;
+    }
+
+     carts.forEach(cart => {
+        subtotal = subtotal + parseFloat(cart.price*cart.quantity);
+    })
+
+    const tax = subtotal * 0.18;
+    const grandTotal = subtotal + tax;
+
+    let billWindow = window.open("", "_blank");
+
+    billWindow.document.write(`
+<!DOCTYPE html>
+<html>
+<head>
+<title>Invoice</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    padding:30px;
+}
+
+h1{
+    text-align:center;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th,td{
+    border:1px solid #ddd;
+    padding:10px;
+}
+
+th{
+    background:#f3f3f3;
+}
+
+.summary{
+    margin-top:20px;
+    width:300px;
+    margin-left:auto;
+}
+
+.summary p{
+    display:flex;
+    justify-content:space-between;
+    font-size:18px;
+}
+
+button{
+    display:none;
+}
+
+@media print{
+    button{
+        display:none;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>My Grocery Store</h1>
+
+<p><b>Date:</b> ${new Date().toLocaleString()}</p>
+
+<p><b>Bill No:</b> BILL-${Date.now()}</p>
+
+<table>
+
+<tr>
+<th>Product</th>
+<th>Qty</th>
+<th>Price</th>
+<th>Total</th>
+</tr>
+
+${carts.map(item=>`
+<tr>
+<td>${item.name}</td>
+<td>${item.quantity}</td>
+<td>₹${item.price}</td>
+<td>₹${item.price * item.quantity}</td>
+</tr>
+`).join("")}
+
+</table>
+
+<div class="summary">
+
+<p><span>Subtotal</span><span>₹${subtotal.toFixed(2)}</span></p>
+
+<p><span>GST (18%)</span><span>₹${tax.toFixed(2)}</span></p>
+
+<hr>
+
+<p style="font-size:22px;font-weight:bold;">
+<span>Grand Total</span>
+<span>₹${grandTotal.toFixed(2)}</span>
+</p>
+
+<p><span>Payment</span><span>${paymentmethod1.toUpperCase()}</span></p>
+
+</div>
+
+<script>
+window.onload = function(){
+    window.print();
+}
+</script>
+
+</body>
+</html>
+`);
+
+    billWindow.document.close();
+}
+let billg = document.querySelector(".billg")
+
+billg.addEventListener("click" , generateBill)
 
 
 itemshow.addEventListener("click", (e) => {
