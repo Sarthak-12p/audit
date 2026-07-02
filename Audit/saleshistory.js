@@ -26,6 +26,13 @@ function displaysales(){
 }
 
 
+let view = document.querySelector(".view")
+
+view.addEventListener("click" , ()=>{
+    alert("coming soon....!")
+})
+
+
 
 
 displaysales();
